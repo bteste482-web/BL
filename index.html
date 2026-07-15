@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BL | Desenvolvimento Web</title>
+
+<link rel="icon" type="image/png" href="logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+
+}
+
+/* ================= HEADER ================= */
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 60px;
+
+    background:#050505;
+
+    z-index:1000;
+
+}
+
+header::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+    left:0;
+
+    width:100%;
+    height:2px;
+
+    background:linear-gradient(
+    90deg,
+    #5d4300,
+    #b8860b,
+    #ffd65e,
+    #b8860b,
+    #5d4300
+    );
+
+}
+
+.logo{
+
+    height:70px;
+
+}
+
+/* ================= BOTÃO ================= */
+
+.whatsapp{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#1ea952;
+
+    padding:13px 22px;
+
+    border-radius:10px;
+
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+.whatsapp:hover{
+
+    transform:translateY(-2px);
+
+    background:#25D366;
+
+}
+
+.whatsapp svg{
+
+    width:22px;
+    height:22px;
+
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.88),rgba(59, 59, 59, 0.89)),
+    url("https://thumbs.dreamstime.com/b/programming-code-abstract-technology-background-software-deve-programming-code-abstract-technology-background-software-112085047.jpg?w=768");
+
+    background-size:cover;
+    background-position:center;
+
+    padding:140px 20px 80px;
+
+}
+
+/* ================= TEXTO ================= */
+
+.texto{
+
+    max-width:950px;
+
+    font-family:monospace;
+
+    font-size:15px;
+
+    line-height:2;
+
+    margin-left:30px;
+
+    color:#efefef;
+
+    text-shadow:0 2px 8px rgba(0,0,0,.8);
+
+}
+
+.texto p{
+
+    margin-bottom:26px;
+
+}
+
+.texto strong{
+
+    color:#f0c24a;
+
+}
+
+img#logo{
+    width: 80px; 
+    height: 80px;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media(max-width:800px){
+
+header{
+
+    padding:15px;
+
+}
+
+.logo{
+
+    height:55px;
+
+}
+
+.whatsapp{
+
+    font-size:14px;
+    padding:10px 15px;
+
+}
+
+.texto{
+
+    font-size:12px;
+    line-height:1.8;
+    margin-left:0;
+
+}
+
+img#logo {
+    width: 40px; 
+    height: 40px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img id="logo" style="width: 80px; height: 80px;" src="logo.png" class="logo">
+
+<a class="whatsapp" href="https://wa.me/555195475626" target="_blank">
+
+<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
+<path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.47 0 .12 5.35.12 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.29-1.65a11.9 11.9 0 005.75 1.47h.01c6.57 0 11.92-5.35 11.92-11.92 0-3.18-1.24-6.17-3.45-8.42z"/>
+</svg>
+
+FALAR NO WHATSAPP
+
+</a>
+
+</header>
+
+<section class="hero">
+
+<div class="texto">
+
+<p>
+<strong>A BL</strong> é uma empresa especializada no desenvolvimento de aplicações web e websites modernos, criada com o objetivo de transformar ideias em soluções digitais eficientes.
+</p>
+
+<p>
+Com foco em qualidade, desempenho e inovação, desenvolvemos projetos que unem design, funcionalidade e tecnologia para entregar a melhor experiência aos usuários.
+</p>
+
+<p>
+Cada projeto é desenvolvido de forma personalizada, levando em consideração as necessidades de cada cliente. Seja um site institucional ou uma plataforma web sob medida, buscamos criar soluções rápidas, seguras e preparadas para acompanhar o crescimento do seu negócio.
+</p>
+
+<p>
+Na BL, acreditamos que a tecnologia é uma ferramenta para impulsionar resultados. Trabalhamos com dedicação em cada detalhe para entregar produtos digitais modernos, confiáveis e desenvolvidos para gerar valor de verdade.
+</p>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
