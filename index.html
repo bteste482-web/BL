@@ -35,11 +35,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 40px;
-            background: rgba(5, 5, 5, 0.92);
+            /* MUDAÇA 1: padding reduzido de 12px 40px para 10px 30px */
+            padding: 10px 30px;
+            background: rgba(5, 5, 5, 0.95);
             backdrop-filter: blur(12px);
             z-index: 1000;
             flex-wrap: wrap;
+            /* MUDAÇA 2: gap adicionado para quando quebrar linha */
+            gap: 8px;
+            /* MUDAÇA 3: altura mínima para evitar que fique muito grande */
+            min-height: 60px;
         }
 
         header::after {
@@ -55,18 +60,21 @@
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 15px;
+            /* MUDAÇA 4: gap reduzido */
+            gap: 10px;
         }
 
+        /* MUDAÇA 5: logo redimensionada de 70px para 45px */
         .logo {
-            height: 70px;
+            height: 45px;
             width: auto;
         }
 
         /* Menu de navegação */
         .nav-menu {
             display: flex;
-            gap: 28px;
+            /* MUDAÇA 6: gap reduzido de 28px para 20px */
+            gap: 20px;
             align-items: center;
             flex-wrap: wrap;
         }
@@ -75,10 +83,12 @@
             color: #dddddd;
             text-decoration: none;
             font-weight: 500;
-            font-size: 1rem;
+            /* MUDAÇA 7: fonte reduzida de 1rem para 0.9rem */
+            font-size: 0.9rem;
             letter-spacing: 0.3px;
             transition: 0.2s;
-            position: relative;
+            /* MUDAÇA 8: white-space adicionado para não quebrar texto */
+            white-space: nowrap;
         }
 
         .nav-menu a:hover {
@@ -88,15 +98,19 @@
         .whatsapp {
             display: flex;
             align-items: center;
-            gap: 10px;
+            /* MUDAÇA 9: gap reduzido de 10px para 8px */
+            gap: 8px;
             text-decoration: none;
             color: white;
             background: #1ea952;
-            padding: 12px 22px;
-            border-radius: 10px;
+            /* MUDAÇA 10: padding reduzido de 12px 22px para 10px 18px */
+            padding: 10px 18px;
+            /* MUDAÇA 11: border-radius reduzido de 10px para 8px */
+            border-radius: 8px;
             font-weight: bold;
             transition: 0.25s;
-            font-size: 0.95rem;
+            /* MUDAÇA 12: fonte reduzida de 0.95rem para 0.85rem */
+            font-size: 0.85rem;
             white-space: nowrap;
         }
 
@@ -106,9 +120,10 @@
             box-shadow: 0 8px 18px rgba(37, 211, 102, 0.3);
         }
 
+        /* MUDAÇA 13: ícone SVG reduzido de 22px para 18px */
         .whatsapp svg {
-            width: 22px;
-            height: 22px;
+            width: 18px;
+            height: 18px;
         }
 
         /* ================= HERO ================= */
@@ -121,7 +136,8 @@
                 url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop");
             background-size: cover;
             background-position: center;
-            padding: 160px 20px 100px;
+            /* MUDAÇA 14: padding reduzido de 160px 20px 100px para 120px 20px 80px */
+            padding: 120px 20px 80px;
             position: relative;
         }
 
@@ -131,7 +147,8 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.4rem, 6vw, 4rem);
+            /* MUDAÇA 15: clamp ajustado para mobile (2rem mínimo, antes era 2.4rem) */
+            font-size: clamp(2rem, 5vw, 4rem);
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 20px;
@@ -144,10 +161,13 @@
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
+            /* MUDAÇA 16: fonte reduzida de 1.3rem para 1.1rem */
+            font-size: 1.1rem;
             color: #dddddd;
-            margin-bottom: 35px;
-            max-width: 700px;
+            /* MUDAÇA 17: margin-bottom reduzido de 35px para 30px */
+            margin-bottom: 30px;
+            /* MUDAÇA 18: max-width reduzido de 700px para 650px */
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.5;
@@ -156,24 +176,30 @@
 
         .cta-group {
             display: flex;
-            gap: 20px;
+            /* MUDAÇA 19: gap reduzido de 20px para 15px */
+            gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 10px;
         }
 
         .btn-primary, .btn-outline {
-            padding: 15px 32px;
-            border-radius: 12px;
+            /* MUDAÇA 20: padding reduzido de 15px 32px para 14px 28px */
+            padding: 14px 28px;
+            /* MUDAÇA 21: border-radius reduzido de 12px para 10px */
+            border-radius: 10px;
             font-weight: 700;
-            font-size: 1.1rem;
+            /* MUDAÇA 22: fonte reduzida de 1.1rem para 1rem */
+            font-size: 1rem;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            /* MUDAÇA 23: gap reduzido de 10px para 8px */
+            gap: 8px;
             transition: all 0.3s;
             border: 2px solid transparent;
             cursor: pointer;
+            white-space: nowrap;
         }
 
         .btn-primary {
@@ -202,17 +228,20 @@
         }
 
         /* ================= SEÇÕES GERAIS ================= */
+        /* MUDAÇA 24: padding das seções reduzido de 70px para 60px */
         section {
-            padding: 70px 20px;
+            padding: 60px 20px;
         }
 
+        /* MUDAÇA 25: max-width do container reduzido de 1200px para 1100px */
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
+        /* MUDAÇA 26: título de seção reduzido de 2.3rem para 2rem */
         .section-title {
-            font-size: 2.3rem;
+            font-size: 2rem;
             font-weight: 700;
             margin-bottom: 15px;
             color: white;
@@ -226,16 +255,21 @@
         /* SERVIÇOS CARDS */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            /* MUDAÇA 27: minmax reduzido de 230px para 220px */
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            /* MUDAÇA 28: gap reduzido de 30px para 25px */
+            gap: 25px;
+            /* MUDAÇA 29: margin-top reduzido de 40px para 35px */
+            margin-top: 35px;
         }
 
         .service-card {
             background: #0e0e0e;
             border: 1px solid #222;
-            border-radius: 20px;
-            padding: 30px 20px;
+            /* MUDAÇA 30: border-radius reduzido de 20px para 16px */
+            border-radius: 16px;
+            /* MUDAÇA 31: padding reduzido de 30px 20px para 25px 18px */
+            padding: 25px 18px;
             text-align: center;
             transition: 0.3s;
             border-top: 3px solid #b8860b;
@@ -247,15 +281,23 @@
             box-shadow: 0 20px 30px -15px rgba(240,194,74,0.2);
         }
 
+        /* MUDAÇA 32: ícone de serviço reduzido de 2.8rem para 2.4rem */
         .service-icon {
-            font-size: 2.8rem;
-            margin-bottom: 18px;
+            font-size: 2.4rem;
+            margin-bottom: 15px;
         }
 
+        /* MUDAÇA 33: título do card reduzido de 1.4rem para 1.2rem */
         .service-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 12px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
             color: #f0c24a;
+        }
+
+        /* MUDAÇA 34: parágrafo do card com fonte definida */
+        .service-card p {
+            font-size: 0.9rem;
+            color: #bbbbbb;
         }
 
         /* DIFERENCIAIS */
@@ -263,7 +305,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 45px;
+            /* MUDAÇA 35: gap reduzido de 45px para 35px */
+            gap: 35px;
             margin-top: 30px;
             text-align: center;
         }
@@ -272,38 +315,46 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 12px;
-            max-width: 200px;
+            /* MUDAÇA 36: gap reduzido de 12px para 10px */
+            gap: 10px;
+            /* MUDAÇA 37: max-width reduzido de 200px para 180px */
+            max-width: 180px;
         }
 
+        /* MUDAÇA 38: ícone diferencial reduzido de 2.8rem para 2.4rem */
         .diff-icon {
-            font-size: 2.8rem;
+            font-size: 2.4rem;
             color: #f0c24a;
             margin-bottom: 5px;
         }
 
+        /* MUDAÇA 39: título diferencial reduzido de 1.2rem para 1.1rem */
         .diff-item h4 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #f0c24a;
-            letter-spacing: 0.4px;
+            letter-spacing: 0.3px;
         }
 
+        /* MUDAÇA 40: parágrafo diferencial com fonte definida */
         .diff-item p {
             color: #bbbbbb;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         /* PROJETOS */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            /* MUDAÇA 41: minmax reduzido de 280px para 260px */
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            /* MUDAÇA 42: gap reduzido de 30px para 25px */
+            gap: 25px;
             margin-top: 35px;
         }
 
         .project-card {
             background: #111;
-            border-radius: 18px;
+            /* MUDAÇA 43: border-radius reduzido de 18px para 16px */
+            border-radius: 16px;
             overflow: hidden;
             border: 1px solid #2a2a2a;
             transition: 0.3s;
@@ -314,28 +365,40 @@
             border-color: #b8860b;
         }
 
+        /* MUDAÇA 44: altura da imagem reduzida de 200px para 180px */
         .project-img {
-            height: 200px;
+            height: 180px;
             background-size: cover;
             background-position: top;
         }
 
+        /* MUDAÇA 45: padding do info reduzido de 20px para 18px */
         .project-info {
-            padding: 20px;
+            padding: 18px;
         }
 
+        /* MUDAÇA 46: título projeto reduzido de 1.3rem para 1.2rem */
         .project-info h4 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: #f0c24a;
             margin-bottom: 8px;
         }
 
+        /* MUDAÇA 47: parágrafo projeto com fonte definida */
+        .project-info p {
+            font-size: 0.9rem;
+            color: #bbbbbb;
+        }
+
         .btn-small {
             display: inline-block;
-            margin-top: 12px;
+            /* MUDAÇA 48: margin-top reduzido de 12px para 10px */
+            margin-top: 10px;
             color: #f0c24a;
             text-decoration: none;
             font-weight: 600;
+            /* MUDAÇA 49: fonte definida */
+            font-size: 0.9rem;
             border-bottom: 1px solid transparent;
         }
 
@@ -348,30 +411,48 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
+            /* MUDAÇA 50: gap reduzido de 30px para 25px */
+            gap: 25px;
             margin-top: 30px;
         }
 
         .step {
             background: #0e0e0e;
-            padding: 25px;
-            border-radius: 16px;
+            /* MUDAÇA 51: padding reduzido de 25px para 22px */
+            padding: 22px;
+            /* MUDAÇA 52: border-radius reduzido de 16px para 14px */
+            border-radius: 14px;
             text-align: center;
-            width: 220px;
+            /* MUDAÇA 53: width reduzido de 220px para 200px */
+            width: 200px;
             border: 1px solid #2e2e2e;
         }
 
+        /* MUDAÇA 54: número do step reduzido de 2.5rem para 2.2rem */
         .step-number {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 800;
             color: #f0c24a;
+        }
+
+        /* MUDAÇA 55: título step com fonte definida */
+        .step h4 {
+            font-size: 1rem;
+            margin: 8px 0;
+        }
+
+        /* MUDAÇA 56: parágrafo step com fonte definida */
+        .step p {
+            font-size: 0.85rem;
+            color: #bbbbbb;
         }
 
         /* FOOTER */
         footer {
             background: #0a0a0a;
             border-top: 2px solid #b8860b;
-            padding: 40px 20px;
+            /* MUDAÇA 57: padding reduzido de 40px para 35px */
+            padding: 35px 20px;
             text-align: center;
         }
 
@@ -379,13 +460,15 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
+            /* MUDAÇA 58: gap reduzido de 15px para 12px */
+            gap: 12px;
             color: #aaa;
         }
 
         .footer-links {
             display: flex;
-            gap: 25px;
+            /* MUDAÇA 59: gap reduzido de 25px para 20px */
+            gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -393,6 +476,8 @@
         .footer-links a {
             color: #ddd;
             text-decoration: none;
+            /* MUDAÇA 60: fonte definida */
+            font-size: 0.9rem;
         }
 
         .footer-links a:hover {
@@ -409,24 +494,141 @@
             animation: fadeUp 0.8s ease forwards;
         }
 
-        @media(max-width: 800px) {
+        /* ================= RESPONSIVO ================= */
+        /* MUDAÇA 61: media query ajustada para 768px (antes era 800px) */
+        @media(max-width: 768px) {
             header {
-                flex-direction: column;
-                gap: 12px;
-                padding: 15px 20px;
+                /* MUDAÇA 62: flex-direction mantido como row (antes virava column) */
+                flex-direction: row;
+                justify-content: space-between;
+                /* MUDAÇA 63: padding reduzido */
+                padding: 8px 15px;
+                /* MUDAÇA 64: gap reduzido */
+                gap: 5px;
+                /* MUDAÇA 65: altura mínima menor */
+                min-height: 50px;
             }
-            .nav-menu {
-                gap: 18px;
-            }
+
+            /* MUDAÇA 66: logo menor no mobile (35px) */
             .logo {
-                height: 55px;
+                height: 35px;
             }
+
+            .nav-menu {
+                /* MUDAÇA 67: gap reduzido */
+                gap: 10px;
+                /* MUDAÇA 68: order 3 para ficar abaixo da logo e botão */
+                order: 3;
+                /* MUDAÇA 69: width 100% para ocupar linha inteira */
+                width: 100%;
+                /* MUDAÇA 70: centralizado */
+                justify-content: center;
+                /* MUDAÇA 71: padding-bottom para respiro */
+                padding-bottom: 5px;
+            }
+
+            .nav-menu a {
+                /* MUDAÇA 72: fonte menor no mobile */
+                font-size: 0.8rem;
+            }
+
             .whatsapp {
-                font-size: 14px;
-                padding: 10px 18px;
+                /* MUDAÇA 73: fonte menor */
+                font-size: 0.75rem;
+                /* MUDAÇA 74: padding menor */
+                padding: 8px 14px;
+                /* MUDAÇA 75: gap menor */
+                gap: 5px;
             }
+
+            .whatsapp svg {
+                /* MUDAÇA 76: ícone menor */
+                width: 16px;
+                height: 16px;
+            }
+
+            .hero {
+                /* MUDAÇA 77: padding ajustado para mobile */
+                padding: 100px 15px 60px;
+                min-height: 100vh;
+            }
+
             .hero h1 {
-                font-size: 2.2rem;
+                /* MUDAÇA 78: fonte menor */
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                /* MUDAÇA 79: fonte menor */
+                font-size: 0.95rem;
+            }
+
+            .btn-primary, .btn-outline {
+                /* MUDAÇA 80: botões menores */
+                padding: 12px 22px;
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                /* MUDAÇA 81: título menor */
+                font-size: 1.6rem;
+            }
+
+            .services-grid {
+                /* MUDAÇA 82: uma coluna no mobile */
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .diff-grid {
+                /* MUDAÇA 83: gap menor */
+                gap: 25px;
+            }
+
+            .diff-item {
+                /* MUDAÇA 84: max-width menor */
+                max-width: 150px;
+            }
+
+            .projects-grid {
+                /* MUDAÇA 85: uma coluna no mobile */
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                /* MUDAÇA 86: gap menor */
+                gap: 20px;
+            }
+
+            .step {
+                /* MUDAÇA 87: width flexível com max-width */
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+
+        /* MUDAÇA 88: NOVA media query para telas muito pequenas (400px) */
+        @media(max-width: 400px) {
+            .nav-menu {
+                gap: 6px;
+            }
+
+            .nav-menu a {
+                font-size: 0.7rem;
+            }
+
+            .whatsapp {
+                font-size: 0.7rem;
+                padding: 6px 10px;
+            }
+
+            .cta-group {
+                gap: 10px;
+            }
+
+            .btn-primary, .btn-outline {
+                padding: 10px 18px;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -438,10 +640,10 @@
         </div>
         <nav class="nav-menu">
             <a href="#">Início</a>
-            <a href="#">Serviços</a>
+            <a href="#servico">Serviços</a>
             <a href="#projetos">Projetos</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
         </nav>
         <a class="whatsapp" href="https://wa.me/555195475626" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.47 0 .12 5.35.12 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.29-1.65a11.9 11.9 0 005.75 1.47h.01c6.57 0 11.92-5.35 11.92-11.92 0-3.18-1.24-6.17-3.45-8.42z"/></svg>
@@ -461,8 +663,11 @@
             </div>
         </div>
     </section>
+    <p id="servico"></p>
 
     <section>
+        <br>
+        <br>
         <div class="container">
             <h2 class="section-title">Nossos <span class="gold-text">Serviços</span></h2>
             <div class="services-grid">
@@ -490,7 +695,9 @@
         </div>
     </section>
 
-    <section style="background:#080808;">
+    <section id="sobre" style="background:#080808;">
+        <br>
+        <br>
         <div class="container">
             <h2 class="section-title">Diferenciais <span class="gold-text">BL</span></h2>
             <div class="diff-grid animate">
@@ -520,13 +727,15 @@
 
     <!-- AQUI ESTÁ A SEÇÃO COM O ID CORRETO -->
     <section id="projetos">
+        <br>
+        <br>
         <div class="container">
             <h2 class="section-title">Projetos <span class="gold-text">recentes</span></h2>
             <div class="projects-grid">
                 <div class="project-card animate">
                     <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop');"></div>
                     <div class="project-info">
-                        <h4>Pizzaria Bella Napoli</h4>
+                        <h4>Pizzaria Minha pizza</h4>
                         <p>Site institucional com cardápio digital e integração com delivery.</p>
                         <a href="#" class="btn-small">Ver projeto →</a>
                     </div>
@@ -546,7 +755,9 @@
         </div>
     </section>
 
-    <section>
+    <section id="contato">
+        <br>
+        <br>
         <div class="container" style="text-align: center;">
             <h2 class="section-title">Vamos <span class="gold-text">conversar?</span></h2>
             <p style="color:#ccc; margin-bottom: 30px;">Seu negócio merece um site profissional. Entre em contato agora.</p>
