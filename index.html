@@ -1,312 +1,571 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>BL | Desenvolvimento Web</title>
-
-<link rel="icon" type="image/png" href="logo.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-
-    background:#050505;
-    color:white;
-    overflow-x:hidden;
-
-}
-
-/* ================= HEADER ================= */
-
-header{
-
-    position:fixed;
-    top:0;
-    left:0;
-
-    width:100%;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:18px 60px;
-
-    background:#050505;
-
-    z-index:1000;
-
-}
-
-header::after{
-
-    content:"";
-
-    position:absolute;
-
-    bottom:0;
-    left:0;
-
-    width:100%;
-    height:2px;
-
-    background:linear-gradient(
-    90deg,
-    #5d4300,
-    #b8860b,
-    #ffd65e,
-    #b8860b,
-    #5d4300
-    );
-
-}
-
-.logo{
-
-    height:70px;
-
-}
-
-/* ================= BOTÃO ================= */
-
-.whatsapp{
-
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    text-decoration:none;
-
-    color:white;
-
-    background:#1ea952;
-
-    padding:13px 22px;
-
-    border-radius:10px;
-
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight:bold;
-
-    transition:.25s;
-
-}
-
-.whatsapp:hover{
-
-    transform:translateY(-2px);
-
-    background:#25D366;
-
-}
-
-.whatsapp svg{
-
-    width:22px;
-    height:22px;
-
-}
-
-/* ================= HERO ================= */
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:
-    linear-gradient(rgba(0, 0, 0, 0.88),rgba(59, 59, 59, 0.89)),
-    url("https://thumbs.dreamstime.com/b/programming-code-abstract-technology-background-software-deve-programming-code-abstract-technology-background-software-112085047.jpg?w=768");
-
-    background-size:cover;
-    background-position:center;
-
-    padding:140px 20px 80px;
-
-}
-
-/* ================= TEXTO ================= */
-
-.texto{
-
-    max-width:950px;
-
-    font-family:monospace;
-
-    font-size:15px;
-
-    line-height:2;
-
-    margin-left:30px;
-
-    color:#efefef;
-
-    text-shadow:0 2px 8px rgba(0,0,0,.8);
-
-}
-
-.texto p{
-
-    margin-bottom:26px;
-
-}
-
-.texto strong{
-
-    color:#f0c24a;
-
-}
-
-img#logo{
-    width: 80px; 
-    height: 80px;
-}
-
-/* ================= RODAPÉ ================= */
-
-footer{
-
-    background:#050505;
-    border-top:2px solid;
-    border-image: linear-gradient(
-    90deg,
-    #5d4300,
-    #b8860b,
-    #ffd65e,
-    #b8860b,
-    #5d4300
-    ) 1;
-
-    padding:30px 60px;
-
-    text-align:center;
-
-    color:#999;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:14px;
-
-}
-
-footer p{
-
-    margin:0;
-
-}
-
-/* ================= RESPONSIVO ================= */
-
-@media(max-width:800px){
-
-header{
-
-    padding:15px;
-
-}
-
-.logo{
-
-    height:55px;
-
-}
-
-.whatsapp{
-
-    font-size:14px;
-    padding:10px 15px;
-
-}
-
-.texto{
-
-    font-size:12px;
-    line-height:1.8;
-    margin-left:0;
-
-}
-
-img#logo {
-    width: 40px; 
-    height: 40px;
-}
-
-footer{
-
-    padding:20px 15px;
-    font-size:12px;
-
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BL | Desenvolvimento de Sites e Sistemas Web</title>
+    <meta name="description" content="Desenvolvimento de sites profissionais, landing pages e sistemas web personalizados para empresas. Solicite um orçamento.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #050505;
+            color: white;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        /* ================= HEADER ================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 40px;
+            background: rgba(5, 5, 5, 0.92);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #5d4300, #b8860b, #ffd65e, #b8860b, #5d4300);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            height: 70px;
+            width: auto;
+        }
+
+        /* Menu de navegação */
+        .nav-menu {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu a {
+            color: #dddddd;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+            transition: 0.2s;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: #f0c24a;
+        }
+
+        .whatsapp {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+            background: #1ea952;
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.25s;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .whatsapp:hover {
+            transform: translateY(-2px);
+            background: #25D366;
+            box-shadow: 0 8px 18px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(20, 20, 20, 0.9)),
+                url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop");
+            background-size: cover;
+            background-position: center;
+            padding: 160px 20px 100px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+        }
+
+        .hero h1 .gold {
+            color: #f0c24a;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #dddddd;
+            margin-bottom: 35px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+            text-shadow: 0 2px 8px black;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .btn-primary, .btn-outline {
+            padding: 15px 32px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #1ea952;
+            color: white;
+            border-color: #1ea952;
+            box-shadow: 0 6px 18px rgba(30,169,82,0.5);
+        }
+
+        .btn-primary:hover {
+            background: #25D366;
+            border-color: #25D366;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(37,211,102,0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #f0c24a;
+            border-color: #f0c24a;
+        }
+
+        .btn-outline:hover {
+            background: rgba(240,194,74,0.1);
+            transform: translateY(-3px);
+        }
+
+        /* ================= SEÇÕES GERAIS ================= */
+        section {
+            padding: 70px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        .gold-text {
+            color: #f0c24a;
+        }
+
+        /* SERVIÇOS CARDS */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: #0e0e0e;
+            border: 1px solid #222;
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: 0.3s;
+            border-top: 3px solid #b8860b;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #f0c24a;
+            box-shadow: 0 20px 30px -15px rgba(240,194,74,0.2);
+        }
+
+        .service-icon {
+            font-size: 2.8rem;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #f0c24a;
+        }
+
+        /* DIFERENCIAIS */
+        .diff-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 45px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .diff-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            max-width: 200px;
+        }
+
+        .diff-icon {
+            font-size: 2.8rem;
+            color: #f0c24a;
+            margin-bottom: 5px;
+        }
+
+        .diff-item h4 {
+            font-size: 1.2rem;
+            color: #f0c24a;
+            letter-spacing: 0.4px;
+        }
+
+        .diff-item p {
+            color: #bbbbbb;
+            font-size: 0.95rem;
+        }
+
+        /* PROJETOS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 35px;
+        }
+
+        .project-card {
+            background: #111;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #b8860b;
+        }
+
+        .project-img {
+            height: 200px;
+            background-size: cover;
+            background-position: top;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h4 {
+            font-size: 1.3rem;
+            color: #f0c24a;
+            margin-bottom: 8px;
+        }
+
+        .btn-small {
+            display: inline-block;
+            margin-top: 12px;
+            color: #f0c24a;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid transparent;
+        }
+
+        .btn-small:hover {
+            border-bottom: 1px solid #f0c24a;
+        }
+
+        /* COMO FUNCIONA */
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .step {
+            background: #0e0e0e;
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            width: 220px;
+            border: 1px solid #2e2e2e;
+        }
+
+        .step-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #f0c24a;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0a0a0a;
+            border-top: 2px solid #b8860b;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            color: #aaa;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #f0c24a;
+        }
+
+        /* Animações sutis */
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        @media(max-width: 800px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 20px;
+            }
+            .nav-menu {
+                gap: 18px;
+            }
+            .logo {
+                height: 55px;
+            }
+            .whatsapp {
+                font-size: 14px;
+                padding: 10px 18px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <div class="logo-area">
+            <img src="logo.png" alt="BL Logo" class="logo" style="width:70px; height:70px;">
+        </div>
+        <nav class="nav-menu">
+            <a href="#">Início</a>
+            <a href="#">Serviços</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+        <a class="whatsapp" href="https://wa.me/555195475626" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.47 0 .12 5.35.12 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.29-1.65a11.9 11.9 0 005.75 1.47h.01c6.57 0 11.92-5.35 11.92-11.92 0-3.18-1.24-6.17-3.45-8.42z"/></svg>
+            FALAR NO WHATSAPP
+        </a>
+    </header>
 
-<header>
+    <section class="hero">
+        <div class="hero-content animate">
+            <h1>Sites modernos que <span class="gold">transformam visitantes em clientes</span></h1>
+            <p class="hero-subtitle">Criamos sites institucionais, landing pages e sistemas web personalizados para empresas que querem crescer na internet.</p>
+            <div class="cta-group">
+                <a href="https://wa.me/555195475626" target="_blank" class="btn-primary">
+                    🟢 Solicite um orçamento gratuito
+                </a>
+                <a href="#projetos" class="btn-outline">⚫ Ver projetos</a>
+            </div>
+        </div>
+    </section>
 
-<img id="logo" style="width: 80px; height: 80px;" src="logo.png" class="logo">
+    <section>
+        <div class="container">
+            <h2 class="section-title">Nossos <span class="gold-text">Serviços</span></h2>
+            <div class="services-grid">
+                <div class="service-card animate">
+                    <div class="service-icon">🖥️</div>
+                    <h3>Sites Institucionais</h3>
+                    <p>Apresente sua empresa de forma profissional e ganhe credibilidade.</p>
+                </div>
+                <div class="service-card animate">
+                    <div class="service-icon">🛒</div>
+                    <h3>Landing Pages</h3>
+                    <p>Páginas focadas em conversão e vendas para campanhas.</p>
+                </div>
+                <div class="service-card animate">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Sistemas Web</h3>
+                    <p>Soluções personalizadas para automatizar seu negócio.</p>
+                </div>
+                <div class="service-card animate">
+                    <div class="service-icon">🚀</div>
+                    <h3>Otimização & SEO</h3>
+                    <p>Sites rápidos, responsivos e preparados para o Google.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<a class="whatsapp" href="https://wa.me/555195475626" target="_blank">
+    <section style="background:#080808;">
+        <div class="container">
+            <h2 class="section-title">Diferenciais <span class="gold-text">BL</span></h2>
+            <div class="diff-grid animate">
+                <div class="diff-item">
+                    <div class="diff-icon">📐</div>
+                    <h4>Desenvolvimento sob medida</h4>
+                    <p>Cada projeto é pensado exclusivamente para a sua necessidade.</p>
+                </div>
+                <div class="diff-item">
+                    <div class="diff-icon">✨</div>
+                    <h4>Código limpo</h4>
+                    <p>Estrutura organizada, leve e de fácil manutenção.</p>
+                </div>
+                <div class="diff-item">
+                    <div class="diff-icon">⚡</div>
+                    <h4>Site otimizado</h4>
+                    <p>Carregamento rápido e performance de alto nível.</p>
+                </div>
+                <div class="diff-item">
+                    <div class="diff-icon">📱</div>
+                    <h4>Design responsivo</h4>
+                    <p>Adaptação perfeita para celular, tablet e desktop.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
-<path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.47 0 .12 5.35.12 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.29-1.65a11.9 11.9 0 005.75 1.47h.01c6.57 0 11.92-5.35 11.92-11.92 0-3.18-1.24-6.17-3.45-8.42z"/>
-</svg>
+    <!-- AQUI ESTÁ A SEÇÃO COM O ID CORRETO -->
+    <section id="projetos">
+        <div class="container">
+            <h2 class="section-title">Projetos <span class="gold-text">recentes</span></h2>
+            <div class="projects-grid">
+                <div class="project-card animate">
+                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop');"></div>
+                    <div class="project-info">
+                        <h4>Pizzaria Bella Napoli</h4>
+                        <p>Site institucional com cardápio digital e integração com delivery.</p>
+                        <a href="#" class="btn-small">Ver projeto →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-FALAR NO WHATSAPP
+    <section style="background:#080808;">
+        <div class="container">
+            <h2 class="section-title">Como <span class="gold-text">funciona</span></h2>
+            <div class="steps animate">
+                <div class="step"><div class="step-number">1</div><h4>Briefing</h4><p>Entendemos seu objetivo.</p></div>
+                <div class="step"><div class="step-number">2</div><h4>Criação</h4><p>Design e desenvolvimento.</p></div>
+                <div class="step"><div class="step-number">3</div><h4>Entrega</h4><p>Site no ar e suporte.</p></div>
+            </div>
+        </div>
+    </section>
 
-</a>
+    <section>
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Vamos <span class="gold-text">conversar?</span></h2>
+            <p style="color:#ccc; margin-bottom: 30px;">Seu negócio merece um site profissional. Entre em contato agora.</p>
+            <a href="https://wa.me/555195475626" target="_blank" class="btn-primary" style="font-size:1.2rem; padding:16px 38px;">
+                🟢 Solicitar orçamento gratuito
+            </a>
+        </div>
+    </section>
 
-</header>
-
-<section class="hero">
-
-<div class="texto">
-
-<p>
-<strong>A BL</strong> é uma empresa especializada no desenvolvimento de aplicações web e websites modernos, criada com o objetivo de transformar ideias em soluções digitais eficientes.
-</p>
-
-<p>
-Com foco em qualidade, desempenho e inovação, desenvolvemos projetos que unem design, funcionalidade e tecnologia para entregar a melhor experiência aos usuários.
-</p>
-
-<p>
-Cada projeto é desenvolvido de forma personalizada, levando em consideração as necessidades de cada cliente. Seja um site institucional ou uma plataforma web sob medida, buscamos criar soluções rápidas, seguras e preparadas para acompanhar o crescimento do seu negócio.
-</p>
-
-<p>
-Na BL, acreditamos que a tecnologia é uma ferramenta para impulsionar resultados. Trabalhamos com dedicação em cada detalhe para entregar produtos digitais modernos, confiáveis e desenvolvidos para gerar valor de verdade.
-</p>
-
-</div>
-
-</section>
-
-<footer>
-<p>BL Desenvolvimento Web - Todos os direitos reservados</p>
-</footer>
-
+    <footer>
+        <div class="footer-content">
+            <div style="font-size:1.6rem; font-weight: bold; color:#f0c24a;">BL</div>
+            <p>Desenvolvimento Web • Sites • Sistemas • Landing Pages</p>
+            <div class="footer-links">
+                <a href="https://wa.me/555195475626" target="_blank">WhatsApp</a>
+                <a href="mailto:bldesenvolvimentoweb@gmail.com">Email</a>
+            </div>
+            <p style="font-size:0.9rem; color:#666;">© 2026 BL. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
-
 </html>
